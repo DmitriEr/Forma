@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import FenceSize from './Components/FenceSize';
+import ChooseMaterial from './Components/ChooseMaterial';
+import Checkbox from './Components/Checkbox';
+import Score from './Components/Score';
 import './App.css';
 
 function App() {
+  const [height, setHeight] = useState(0);
+  const [length, setLength] = useState(0);
+  const [price, setPrice] = useState(400);
+  const [result, setResult] = useState(0);
+
+  useEffect(() => {
+    const sum = height * length * price;
+    setResult(sum);
+  }, [height, length, price])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="form">
+        <h1 className="form__title">Заказать забор</h1>
+        <form autoComplete="off" name="fence">
+          <FenceSize name="Длина" setLength={setLength}/>
+          <FenceSize name="Высота" setHeight={setHeight}/>
+          <ChooseMaterial setPrice={setPrice}/>
+          <Checkbox/>
+        </form>
+        <Score result={result}/>
+        <button className="continue">Далее</button>
+      </div>
     </div>
   );
 }
