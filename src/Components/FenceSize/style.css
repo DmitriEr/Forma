@@ -1,9 +1,8 @@
 .fence-size,
 input[type="text"] {
   margin: auto;
-  font-weight: normal;
   font-size: 18px;
-  line-height: 25px;
+  line-height: 18px;
   color: #323232;
 }
 
@@ -15,8 +14,16 @@ input[type="text"] {
   box-sizing: border-box;
   box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15);
   border-radius: 3px;
+  padding: 15px;
 }
 
 .fence-size__dimension {
   padding-left: 14px;
+  position: relative;
+}
+
+.fence-size__title {
+  font-weight: normal;
+  margin-bottom: 14px;
+  margin-top: 30px;
 }

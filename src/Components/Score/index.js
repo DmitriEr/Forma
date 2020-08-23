@@ -1,9 +1,11 @@
 import React from 'react';
+import './style.css';
 
 const Score = ({ result }) => {
   return (
-    <div>
-      {`Сумму заказа: ${result} Р`}
+    <div className="price">
+      <span>Cумма заказа: </span>
+      <span className="price__number">{`${result} ₽`}</span>
     </div>
   )
 }

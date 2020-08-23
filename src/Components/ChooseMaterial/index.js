@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './index.css';
+import './style.css';
 
 const money = {
   'Профнастил': 400,
@@ -33,7 +33,8 @@ const ChooseMaterial = ({ setPrice }) => {
   }
 
   return (
-    <div>
+    <div className="materials-wrapper">
+      <h4 className="materials__title">Материал забора</h4>
       <div className="materials materials__choice" onClick={() => showValue()}>
         {material}
         <span className="drop-down"></span>
