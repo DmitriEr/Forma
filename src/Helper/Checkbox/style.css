@@ -1,0 +1,8 @@
+.checkmark {
+  display: inline-block;
+  width: 30px;
+  mix-blend-mode: normal;
+  color: #3B8C1D;
+  font-weight: bold;
+  margin-left: 26px;
+}

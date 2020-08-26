@@ -8,7 +8,7 @@ const money = {
   'Сетка': 200,
 }
 
-const ChooseMaterial = ({ setPrice }) => {
+const ChooseMaterial = ({ setPrice, check, setCheck, setResultMaterial }) => {
   const [boolean, setBoolean] = useState(false);
   const [material, setMaterial] = useState(`Профнастил 400 Р за м²`);
 
@@ -26,6 +26,8 @@ const ChooseMaterial = ({ setPrice }) => {
         setPrice(money[name]);
         setMaterial(`${name} ${money[name]} Р за м²`);
         setBoolean(false);
+        setCheck(true);
+        setResultMaterial(name);
       }}>
         {`${name} ${money[name]} Р за м²`}
       </div>
@@ -38,6 +40,7 @@ const ChooseMaterial = ({ setPrice }) => {
       <div className="materials materials__choice" onClick={() => showValue()}>
         {material}
         <span className="drop-down"></span>
+        {check ? <span className="checkmark checkmark__options">✓</span> : null}
       </div>
       <div className="options">
         {boolean ? showMaterial('Профнастил') : null}

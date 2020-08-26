@@ -34,11 +34,7 @@
 .continue {
   width: 150px;
   height: 50px;
-  left: 222px;
-  top: 648px;
   cursor: pointer;
-  background: linear-gradient(180deg, #818387 0%, #696B6F 100%);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
   border: none;
   clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
@@ -47,4 +43,55 @@
   line-height: 25px;
   color: #FFFFFF;
   margin-bottom: 54px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.data {
+  display: block;
+  background: linear-gradient(180deg, #818387 0%, #696B6F 100%);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  border: none;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 13px 62px 18px 61px;
+  margin-top: 32px;
+}
+
+.continue__off {
+  background: linear-gradient(180deg, #818387 0%, #696B6F 100%);
+}
+
+.continue__on {
+  background: linear-gradient(180deg, #4892EC 0%, #2F79D4 100%);
+}
+
+.result {
+  width: 310px;
+  height: 94px;
+  margin: auto;
+  padding-right: 55px;
+  margin-top: 19px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #323232;
+}
+
+.result-btn__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-sentence {
+  color: #4892EC;
+}
+
+.result-price {
+  color: red;
 }
