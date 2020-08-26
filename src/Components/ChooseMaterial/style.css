@@ -15,6 +15,7 @@
   border-radius: 3px;
   cursor: pointer;
   position: relative;
+  padding-left: 15px;
 }
 
 .materials__choice::after {
