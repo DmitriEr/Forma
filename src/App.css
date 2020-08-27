@@ -3,6 +3,11 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-style: normal;
+  background-image: url('./assets/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .form {
@@ -15,8 +20,7 @@
   border: solid 1px #000000;
   background: #ffffff;
   margin: auto;
-  font-family: 'Open Sans', 'Arial', sans-serif;
-  font-style: normal;
+  position: relative;
 }
 
 .form__title {
@@ -61,6 +65,8 @@
   margin-top: 32px;
   width: 230px;
   height: 50px;
+  cursor: pointer;
+  margin-right: 45px;
 }
 
 .continue__off {
@@ -98,18 +104,85 @@
 }
 
 .finish {
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 490px;
   height: 330px;
-  left: 131px;
-  top: 107px;
   background: #FFFFFF;
+  border: solid 1px #000000;
+  position: relative;
+}
+
+.finish__title {
+  text-align: center;
+  height: 36px;
+}
+
+.finish__sentences {
+  width: 402px;
+  height: 144px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #323232;
+}
+
+.finish__first-sentence {
+  top: 0px;
+  margin-top: 39px;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+.finish__last-sentence {
+  bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+
+.finish__close,
+.prev-page {
+  position: absolute;
+  width: 54px;
+  height: 15px;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  text-decoration-line: underline;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  top: -25px;
+  background: transparent;
+  color: #FFFFFF;
+}
+
+.finish__close {
+  right: 0px;
+}
+
+.finish__mail {
+  margin-top: 0px;
+}
+
+.finish__phone {
+  margin-bottom: 0px;
+}
+
+.prev-page {
+  left: 0px;
 }
 
 .back {
   position: absolute;
   background: transparent;
   cursor: pointer;
+}
+
+.important-data {
+  color: #4892EC;
 }
 
 /* форма */
@@ -176,8 +249,13 @@ input[type="tel"] {
   cursor: pointer;
 }
 
+label {
+  cursor: pointer;
+}
+
 input[type="checkbox"] {
   margin-left: 7px;
+  cursor: pointer;
 }
 
 /* результат */

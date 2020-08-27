@@ -23,7 +23,7 @@ function App() {
   const [mail, setMail] = useState('');
   const [phone, setPhone] = useState('');
   const [count, setCount] = useState(0);
-
+  
   useEffect(() => {
     const material = height * length * price;
     const option = mounting ? height * length * 200 : 0;
@@ -35,6 +35,12 @@ function App() {
     }
     setResult(sum);
   }, [height, length, price, mounting, check]);
+
+  useEffect(() => {
+    if (name.length > 1 && mail.length > 5 && phone.length > 6) {
+      setFarther(true);
+    }
+  }, [name, mail, phone])
 
   const handleUserCheck = (event) => {
     setMounting(event.target.checked);
@@ -149,7 +155,7 @@ function App() {
               <ChooseMaterial setPrice={setPrice} check={check} setCheck={setCheck} setResultMaterial={setResultMaterial}/>
               <div className="checkbox-wrapper">
                 <label>
-                  <input type="checkbox" onChange={handleUserCheck}/>
+                  <input type="checkbox" onChange={handleUserCheck} checked={mounting}/>
                     Нужен монтаж
                 </label>
               </div>
@@ -177,6 +183,7 @@ function App() {
       case 'contact':
         return (
           <div className="form">
+            <button className="prev-page" onClick={() => setSwitchPage('start')}>&larr;Вернуться</button>
             <h1 className="form__title">Пожалуйста, представьтесь</h1>
             <form autoComplete="off" name="fence">
             <div className="form__inner input__contact">
@@ -232,7 +239,7 @@ function App() {
                   value="Отправить"
                   onClick={(event) => {
                     event.preventDefault();
-                    if (name.length > 1 && mail.length > 5 && phone.length > 6) {
+                    if (farther) {
                       setSwitchPage('finish');
                       setFarther(false);
                       const num = count + 1;
@@ -248,9 +255,37 @@ function App() {
       default:
         return (
           <div className="finish">
-            <h2 className="finish__title">{`${name}, заказ №${count} сформирован`}</h2>
-            <p className="finish__mail">{`Мы повторили его комплектацию на почту ${mail}`}</p>
-            <p className="finish__phone">{`В ближайшее время наш специалист свяжется с вами по телефону ${phone}`}</p>
+            <button className="prev-page" onClick={() => {
+              setSwitchPage('start');
+              setLength('');
+              setHeight('');
+              setPrice(400);
+              setResult(0);
+              setResultMaterial('');
+              setName('');
+              setPhone('');
+              setMail('');
+              setMounting(false);
+            }}>Закрыть</button>
+            <div>
+              <h2 className="finish__title finish__first-sentence">
+                {`${name},`}
+              </h2>
+              <h2 className="finish__title finish__last-sentence">
+                заказ
+                <span className="important-data">{` №${count} `}сформирован</span>
+              </h2>
+            </div>
+            <div className="finish__sentences">
+              <p className="finish__mail">
+                Мы повторили его комплектацию на почту
+                <span className="important-data">{` ${mail}`}</span>
+              </p>
+              <p className="finish__phone">
+                В ближайшее время наш специалист свяжется с вами по телефону
+                <span className="important-data">{` ${phone} `}</span>
+              </p>
+            </div>
           </div>
         );
     }
