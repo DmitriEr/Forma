@@ -4,12 +4,6 @@ import Contacts from './Components/Contacts';
 import Outcome from './Components/Outcome';
 import './App.css';
 
-const declination = {
-  0: 'метр',
-  1: 'метра',
-  2: 'метров',
-}
-
 function App() {
   const [height, setHeight] = useState('');
   const [length, setLength] = useState('');

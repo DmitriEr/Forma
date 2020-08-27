@@ -1,7 +1,8 @@
 import React from 'react';
 import ChooseMaterial from '../ChooseMaterial';
-import showCheckMar from '../../Helper/Checkbox';
-import manyMoney from '../../Helper/ManyMoney';
+import showCheckMar from '../../Helper/checkbox';
+import manyMoney from '../../Helper/manyMoney';
+import showMeter from '../../Helper/meter';
 import './style.css';
 
 const Order = ({
@@ -53,7 +54,7 @@ const Order = ({
               required
             /> 
           </label>
-          <span className="fence-size__dimension">метров</span>
+          <span className="fence-size__dimension">{showMeter(length)}</span>
           {showCheckMar(length.length, 0)}
         </div>
         <div className="form__inner">
@@ -69,7 +70,7 @@ const Order = ({
               required
             /> 
           </label>
-          <span className="fence-size__dimension">метров</span>
+          <span className="fence-size__dimension">{showMeter(height)}</span>
           {showCheckMar(height.length, 0)}
         </div>
         <ChooseMaterial setPrice={setPrice} check={check} setCheck={setCheck} setResultMaterial={setResultMaterial}/>

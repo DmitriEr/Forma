@@ -1,5 +1,6 @@
 import React from 'react';
-import showCheckMar from '../../Helper/Checkbox';
+import showCheckMar from '../../Helper/checkbox';
+import showMeter from '../../Helper/meter';
 import './style.css';
 
 const Contacts = ({ 
@@ -85,8 +86,8 @@ const Contacts = ({
         </div>
         <div className="result">
           Вы укомплектовали забор
-          <span className="result-sentence">{` длинной ${length} метров `}</span> и
-          <span className="result-sentence">{` высотой ${height} метров `}</span> из материала
+          <span className="result-sentence">{` длинной ${length} ${showMeter(length)} `}</span> и
+          <span className="result-sentence">{` высотой ${height} ${showMeter(height)} `}</span> из материала
           <span className="result-sentence">{` ${resultMaterial.toLowerCase()} `}</span> на сумму
           <span className="result-price">{` ${result} Р`}</span>
         </div>
