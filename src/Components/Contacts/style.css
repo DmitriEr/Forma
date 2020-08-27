@@ -1,0 +1,105 @@
+.form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 490px;
+  height: 645px;
+  border: solid 1px #000000;
+  background: #ffffff;
+  margin: auto;
+  position: relative;
+}
+
+.form__title {
+  width: 100%;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 41px;
+  margin-bottom: 0px;
+  margin-top: 39px;
+  font-size: 30px;
+  color: #323232;
+  text-align: center;
+}
+
+.form__inner,
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  margin: auto;
+  font-size: 18px;
+  line-height: 18px;
+  color: #323232;
+}
+
+.input-wrapper {
+  height: 50px;
+  background: linear-gradient(180deg, #F8F8F8 0%, rgba(243, 243, 243, 0) 100%, #F2F2F2 100%);
+  border: 1px solid #D7D7D7;
+  box-sizing: border-box;
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  padding: 15px;
+}
+
+.input-contact {
+  width: 310px;
+}
+
+.input__contact {
+  display: flex;
+  justify-content: center;
+  margin-left: 56px;
+}
+
+.fence-size__number {
+  width: 230px;
+}
+
+.contact__number {
+  width: 310px;
+}
+
+.fence-size__dimension {
+  display: inline-block;
+  padding-left: 14px;
+  position: relative;
+  width: 80px;
+}
+
+.input__title {
+  font-weight: normal;
+  margin-bottom: 14px;
+  margin-top: 30px;
+}
+
+.checkbox-wrapper {
+  margin-top: 26px;
+  margin-bottom: 31px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  margin-left: 7px;
+  cursor: pointer;
+}
+
+.price {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 33px;
+  color: #323232;
+  margin-bottom: 30px;
+}
+
+.price__number {
+  color: #A10031;
+}
