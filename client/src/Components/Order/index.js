@@ -85,7 +85,7 @@ const Order = ({
           <span className="price__number">{`${manyMoney(result)}`}</span>
         </div>
         <input 
-          type="submit"
+          type="button"
           className={`${farther ? 'continue__on continue' : 'continue__off continue'}`}
           value="Далее"
           title="Заполните все обязательные поля: длина, высота, материал"

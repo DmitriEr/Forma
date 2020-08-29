@@ -18,6 +18,7 @@ function App() {
   const [mail, setMail] = useState('');
   const [phone, setPhone] = useState('');
   const [count, setCount] = useState(0);
+  const [sent, setSent] = useState(false);
   
   useEffect(() => {
     const material = height * length * price;
@@ -77,6 +78,8 @@ function App() {
             setName={setName}
             setMail={setMail}
             setPhone={setPhone}
+            sent={sent}
+            setSent={setSent}
           />
         )
       break;

@@ -79,3 +79,47 @@
 .important-data {
   color: #4892EC;
 }
+
+@media (max-width: 700px) and (min-width: 500px) {
+  .finish {
+    width: 390px;
+  }
+
+  .finish__title {
+    font-size: 20px;
+    padding: 0px 20px;
+  }
+
+  .finish__sentences {
+    font-size: 16px;
+    padding: 0px 20px;
+  }
+}
+
+@media (max-width: 499px) and (min-width: 320px) {
+  .finish {
+    width: 280px;
+  }
+
+  .finish__first-sentence {
+    margin-top: 15px;
+  }
+
+  .finish__last-sentence {
+    margin-bottom: 10px;
+  }
+
+  .finish__title {
+    font-size: 18px;
+    padding: 0px 10px;
+  }
+
+  .finish__sentences {
+    font-size: 16px;
+    padding: 0px 10px;
+  }
+
+  .finish__titles {
+    margin-bottom: -50px;
+  }
+}

@@ -36,7 +36,7 @@ const Outcome = ({
       }}>
       Закрыть
     </button>
-    <div>
+    <div className="finish__titles">
       <h2 className="finish__title finish__first-sentence">
         {`${name},`}
       </h2>
