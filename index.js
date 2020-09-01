@@ -1,3 +1,4 @@
+import password from './index.js';
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
@@ -20,7 +21,7 @@ app.post('/api/forma', (req, res) => {
     port: 465,
     auth: {
       user: 'dmitrierk@gmail.com',
-      pass: 'SkateAndSnow163'
+      pass: password
     }
   });
 
